@@ -1,3 +1,10 @@
+import product1 from "../assets/image Product.png";
+import product2 from "../assets/image Product (1).png";
+import product3 from "../assets/Product Picture01.png";
+import product4 from "../assets/Product Picture02.png";
+import product5 from "../assets/Product Picture03.png";
+import product6 from "../assets/Group 493.png";
+
 export const products = [
   {
     id: 1,
@@ -11,8 +18,7 @@ export const products = [
     isHot: true,
     colors: ["red", "blue", "black"],
     category: "nike",
-    imageUrl:
-      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+    imageUrl: product1,
   },
   {
     id: 2,
@@ -26,8 +32,7 @@ export const products = [
     isHot: false,
     colors: ["white", "black"],
     category: "adidas",
-    imageUrl:
-      "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+    imageUrl: product2,
   },
   {
     id: 3,
@@ -41,8 +46,7 @@ export const products = [
     isHot: false,
     colors: ["white", "black"],
     category: "airmax",
-    imageUrl:
-      "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+    imageUrl: product3,
   },
   {
     id: 4,
@@ -56,8 +60,7 @@ export const products = [
     isHot: true,
     colors: ["red", "blue", "black"],
     category: "vans",
-    imageUrl:
-      "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+    imageUrl: product4,
   },
   {
     id: 5,
@@ -71,8 +74,21 @@ export const products = [
     isHot: false,
     colors: ["white", "black"],
     category: "all-stars",
-    imageUrl:
-      "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg",
+    imageUrl: product5,
+  },
+  {
+    id: 6,
+    name: "Adidas Ultraboost",
+    price: "157",
+    discountPrice: "112",
+    discountPercent: 28,
+    ratingValue: 4.8,
+    maxRating: 5,
+    ratingCount: 80,
+    isHot: false,
+    colors: ["white", "black"],
+    category: "all-stars",
+    imageUrl: product6,
   },
   // ... add up to 24
 ];
