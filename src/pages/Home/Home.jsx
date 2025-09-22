@@ -7,10 +7,8 @@ export const Home = () => {
     <>
       <Header />
       <div className="flex">
-        {/* Sidebar on the left */}
-        <Sidebar />
 
-        {/* Hero on the right */}
+        <Sidebar />
         <div className="flex-1 ">
           <Hero />
         </div>
