@@ -2,7 +2,7 @@ import HeroImage from "../../assets/Group 493.png";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-full mt-3 ">
+    <div className="w-full mt-3 ">
       <img
         src={HeroImage}
         alt="Hero"
