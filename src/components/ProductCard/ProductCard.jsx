@@ -1,90 +1,51 @@
-import { products } from "../../data/products";
+import React from "react";
+import { FaStar } from "react-icons/fa";
 
-export const ProductCard = () => {
+const ProductCard = ({ product }) => {
   return (
-    <div className="flex p-4 justify-center">
-      <ProductContainer />
-    </div>
-  );
-};
-
-const StarRating = ({ rating, maxRating = 5 }) => {
-  const filledStars = Math.round(rating); // round rating to nearest integer
-  const stars = [];
-
-  for (let i = 1; i <= maxRating; i++) {
-    if (i <= filledStars) {
-      stars.push(
-        <span key={i} className="text-yellow-400">
-          ⭐
+    <div className="relative bg-white rounded-md shadow hover:shadow-lg transition p-4">
+      {product.isHot && (
+        <span className="absolute top-4 left-4 bg-red-500 text-white text-xs font-semibold px-5 py-2 r">
+          HOT
         </span>
-      );
-    } else {
-      stars.push(
-        <span key={i} className="text-gray-300">
-          ⭐
-        </span>
-      );
-    }
-  }
-
-  return <div>{stars}</div>;
-};
-
-const ProductContainer = () => {
-  const ans = products.map((product) => {
-    return (
-      <div
-        className="border rounded-lg h-full w-100 mr-6 shadow-sm hover:shadow-md transition"
-        key={product.id}
-      >
-        {/* Image */}
-        <div className="relative p-4 pt-2">
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="w-full h-46 object-cover rounded-lg hover:scale-107 transition-transform duration-300 ease-in-out"
-          />
-          {product.isHot && (
-            <span className="absolute top-0 left-0 bg-red-500 text-white text-sm px-3 py-2 rounded-lg">
-              HOT
-            </span>
-          )}
-        </div>
-
-        {/* Info */}
-        <div className="p-4">
-          <h3 className="text-2xl font-medium text-gray-800">
-            {product.name}
-          </h3>
-
-          {/* Price */}
-          <div className="flex items-center gap-2 mt-2">
-            <span className="text-lg font-semibold text-gray-90">
-              ${product.discountPrice}
-            </span>
-            <span className="text-sm line-through text-gray-400">
-              ${product.price}
-            </span>
-            <span className="text-sm text-green-600">
-              -{product.discountPercent}%
-            </span>
-          </div>
-
-          {/* Rating */}
-          <div className="text-sm text-gray-500 mt-2">
-            <StarRating
-              rating={product.ratingValue}
-              maxRating={product.maxRating}
+      )}
+      <div className="flex justify-center items-center">
+        <img
+          src={product.imageUrl}
+          alt={product.name}
+          className="w-full object-contain"
+        />
+      </div>
+      <div className="mt-1">
+        <h3 className="font-bold tracking-wider text-gray-800 text-sm md:text-base flex items-center justify-center">
+          {product.name}
+        </h3>
+        <div className="flex items-center justify-center gap-2  text-yellow-400 mt-2">
+          {Array.from({ length: product.maxRating }, (_, i) => (
+            <FaStar
+              key={i}
+              className={`h-4 w-4 ${
+                i < Math.round(product.ratingValue)
+                  ? "text-yellow-400"
+                  : "text-gray-300"
+              }`}
             />
-            <span>({product.ratingCount})</span>
-          </div>
+          ))}
+   </div>
+        <div className=" flex justify-center items-center text-center mt-2">
+          <span className="text-sky-600 font-bold text-lg ">
+            ${product.price}
+          </span>
+          <span className="ml-2 text-gray-400 line-through text-sm">
+            ${product.discountPrice}
+          </span>
+          <span className="ml-2 text-red-500 text-sm font-semibold">
+            {product.discountPercent}% Off
+          </span>
         </div>
       </div>
-    );
-  });
-
-  return ans;
+    </div>
+  );
 };
 
 export default ProductCard;
