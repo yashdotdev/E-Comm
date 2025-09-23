@@ -18,6 +18,7 @@ export const PriceFilter = () => {
         </p>
       </div>
       <div className="relative w-full h-6 mb-8">
+        {/* Track */}
         <div className="absolute top-1/2 -translate-y-1/2 w-full h-1 bg-gray-300 rounded">
           <div
             className="absolute h-1 bg-blue-500 rounded"
@@ -27,6 +28,8 @@ export const PriceFilter = () => {
             }}
           />
         </div>
+
+        {/* Min slider */}
         <input
           type="range"
           min={0}
