@@ -3,14 +3,14 @@ import product2 from "../assets/image Product (1).png";
 import product3 from "../assets/Product Picture01.png";
 import product4 from "../assets/Product Picture02.png";
 import product5 from "../assets/Product Picture03.png";
-import product6 from "../assets/Group 493.png";
+import product6 from "../assets/image Product (3).png";
 
 export const products = [
   {
     id: 1,
     name: "Nike Air Zoom",
-    price: "134",
-    discountPrice: "101",
+    price: 134,
+    discountPrice: 101,
     discountPercent: 25,
     ratingValue: 4.5,
     maxRating: 5,
@@ -23,8 +23,8 @@ export const products = [
   {
     id: 2,
     name: "Adidas Ultraboost",
-    price: "157",
-    discountPrice: "112",
+    price: 157,
+    discountPrice: 112,
     discountPercent: 28,
     ratingValue: 4.8,
     maxRating: 5,
@@ -37,8 +37,8 @@ export const products = [
   {
     id: 3,
     name: "Nike Air Max 270",
-    price: "299,43",
-    discountPrice: "534,33",
+    price: 399,
+    discountPrice: 533,
     discountPercent: 28,
     ratingValue: 4,
     maxRating: 5,
@@ -51,8 +51,8 @@ export const products = [
   {
     id: 4,
     name: "Nike Air Zoom",
-    price: "134",
-    discountPrice: "101",
+    price: 134,
+    discountPrice: 101,
     discountPercent: 25,
     ratingValue: 4.5,
     maxRating: 5,
@@ -65,8 +65,8 @@ export const products = [
   {
     id: 5,
     name: "Adidas Ultraboost",
-    price: "157",
-    discountPrice: "112",
+    price: 157,
+    discountPrice: 112,
     discountPercent: 28,
     ratingValue: 4.8,
     maxRating: 5,
@@ -79,8 +79,8 @@ export const products = [
   {
     id: 6,
     name: "Adidas Ultraboost",
-    price: "157",
-    discountPrice: "112",
+    price: 157,
+    discountPrice: 112,
     discountPercent: 28,
     ratingValue: 4.8,
     maxRating: 5,
