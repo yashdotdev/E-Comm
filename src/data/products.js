@@ -87,7 +87,7 @@ export const products = [
     ratingCount: 80,
     isHot: false,
     colors: ["white", "black"],
-    category: "all-stars",
+    category: "nike",
     imageUrl: product6,
   },
   // ... add up to 24
