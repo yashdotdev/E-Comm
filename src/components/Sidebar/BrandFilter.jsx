@@ -1,8 +1,11 @@
 import { useState } from "react";
 
 export const BrandFilter = () => {
-  const brands = ["Nike", "Adidas", "Vans", "New Balance", "Puma", "Reebok"];
+  const brands = ["Nike", "Adidas", "Vans", "Siemens", "Puma", "Reebok"];
   const [showBrands, setShowBrands] = useState(false);
+
+  // show 4 items by default
+  const visible = showBrands ? brands : brands.slice(0, 4);
 
   return (
     <div>
@@ -11,22 +14,23 @@ export const BrandFilter = () => {
           Brand
         </h2>
       </div>
-      <div className="flex flex-col gap-4 text-md mb-6">
-        {(showBrands ? brands : brands.slice(0, 6)).map((brand) => (
+      <div className="flex flex-col gap-4 text-md">
+        {visible.map((brand) => (
           <div
             key={brand}
             className="flex justify-between items-center hover:text-blue-500 cursor-pointer"
           >
             <span>{brand}</span>
-            <span className="text-gray-400 text-sm">
-              {Math.floor(Math.random() * 100)}
-            </span>
+            <span className="text-gray-400 text-sm">99</span>
           </div>
         ))}
-        {brands.length > 6 && (
+
+        {/* only show button when total brands > 4 */}
+        {brands.length > 4 && (
           <button
-            onClick={() => setShowBrands(!showBrands)}
-            className="text-sm text-blue-500 hover:underline self-start"
+            onClick={() => setShowBrands((s) => !s)}
+            className="text-md font-semibold text-blue-500 hover:text-blue-700 cursor-pointer self-start"
+            aria-expanded={showBrands}
           >
             {showBrands ? "View less" : "View more"}
           </button>
