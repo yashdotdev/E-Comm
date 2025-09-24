@@ -17,7 +17,7 @@ export const PriceFilter = () => {
           ${minVal.toFixed(2)} - ${maxVal.toFixed(2)}
         </p>
       </div>
-      <div className="relative w-full h-6 mb-8">
+      <div className="relative w-full h-6 mb-2">
         {/* Track */}
         <div className="absolute top-1/2 -translate-y-1/2 w-full h-1 bg-gray-300 rounded">
           <div
