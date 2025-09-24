@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 
-export const HotDeals = ({ categories, categoryCounts, showMoreCats, setShowMoreCats }) => {
+export const HotDeals = ({ categories, categoryCounts, showMoreCats }) => {
   return (
-    <div className="px-0 py-2">
-      <h2 className="text-[#22262A] text-xl font-semibold">Hot Deals</h2>
-      <div className="flex flex-col gap-8 text-md mb-6 py-8">
+    <div className="px-0">
+      <h2 className="text-[#22262A] text-xl font-semibold mb-4">Hot Deals</h2>
+      <div className="flex flex-col gap-8 text-md py-6">
         {(showMoreCats ? categories : categories.slice(0, 6)).map((cat) => (
           <NavLink
             key={cat}
@@ -21,14 +21,6 @@ export const HotDeals = ({ categories, categoryCounts, showMoreCats, setShowMore
             </span>
           </NavLink>
         ))}
-        {categories.length > 6 && (
-          <button
-            onClick={() => setShowMoreCats(!showMoreCats)}
-            className="text-sm text-blue-500 hover:underline self-start"
-          >
-            {showMoreCats ? "View less" : "View more"}
-          </button>
-        )}
       </div>
     </div>
   );
