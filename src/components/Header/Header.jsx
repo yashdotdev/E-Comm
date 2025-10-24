@@ -11,7 +11,7 @@ export const Header = () => {
         <div className="flex items-center">
           <img src={img1} alt="Icon" className="h-12 w-12" />
           <p className="text-center ml-3 text-[24px] font-bold text-[#22262A]">
-            E-Comm
+            Nexamart
           </p>
         </div>
 
