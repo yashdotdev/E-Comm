@@ -1,6 +1,6 @@
 import img1 from "../../assets/Icon.svg";
 import img2 from "../../assets/Cart.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Home } from "../../pages/Home/Home.jsx";
 
 export const Header = () => {
@@ -77,9 +77,11 @@ export const Header = () => {
         {/* Right Section */}
         <div className="flex flex-row justify-center items-center p-2">
           <img src={img2} alt="cart logo" className="h-8 w-8" />
+          <Link to="/cart">
           <p className="text-[20px]">
             Items <span className="ml-2 text-gray-400 text-[20px]">$0.00</span>
           </p>
+          </Link>
         </div>
       </div>
     </nav>
